@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": "96df",
+      "username": "jaimeirazabal1",
+      "password": "16923509j",
+      "role": "member"
+    },
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "username": "john",
+      "password": "john123",
+      "role": "member"
+    },
+    {
+      "id": "3",
+      "username": "jane",
+      "password": "jane123",
+      "role": "member"
+    }
+  ],
+  "courts": [
+    {
+      "id": "1",
+      "name": "Court 1",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:828/1*6QU98KnA_iROC8C6lFMjTQ.jpeg"
+    },
+    {
+      "id": "2",
+      "name": "Court 2",
+      "imageUrl": "https://cdn.quepasaweb.com.ar/wp-content/uploads/2021/06/cancha-tenis-campo-1-vicente-lopez-2.jpeg"
+    },
+    {
+      "id": "3",
+      "name": "Court 3",
+      "imageUrl": "https://www.qualitysportinstalacionesdeportivas.com/wp-content/uploads/2019/09/Tipos-de-pistas-de-tenis-1.jpg"
+    },
+    {
+      "id": "8218",
+      "name": "Court 4 - Available",
+      "status": "available"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "1",
+      "courtId": 1,
+      "date": "2024-08-10",
+      "time": "10:00",
+      "type": "single",
+      "userId": 1
+    },
+    {
+      "id": "2",
+      "courtId": 2,
+      "date": "2024-08-10",
+      "time": "11:00",
+      "type": "double",
+      "userId": 2
+    }
+  ]
+}

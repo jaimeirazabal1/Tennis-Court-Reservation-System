@@ -1,0 +1,20 @@
+{
+    "welcome": "Welcome to Tennis Court Reservations",
+    "register": "Register",
+    "login": "Login",
+    "reserve_court": "Reserve a Court",
+    "view_reservations": "View Reservations",
+    "delete_reservation": "Delete Reservation",
+    "court": "Court",
+    "date": "Date",
+    "time": "Time",
+    "type": "Type",
+    "single": "Single",
+    "double": "Double",
+    "admin_dashboard": "Admin Dashboard",
+    "reservation_successful": "Reservation successful!",
+    "reservation_deleted": "Reservation deleted successfully",
+    "reservation_failed": "Failed to make reservation",
+    "delete_failed": "Failed to delete reservation",
+    "view_history": "View History"
+}

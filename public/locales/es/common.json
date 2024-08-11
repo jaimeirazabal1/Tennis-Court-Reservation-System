@@ -1,0 +1,22 @@
+{
+    "welcome": "Bienvenido a Reservaciones de Canchas de Tenis",
+    "register": "Registrarse",
+    "login": "Iniciar Sesión",
+    "reserve_court": "Reservar",
+    "view_reservations": "Ver Reservaciones",
+    "delete_reservation": "Eliminar Reservación",
+    "court": "Cancha",
+    "date": "Fecha",
+    "time": "Hora",
+    "type": "Tipo",
+    "single": "Individual",
+    "double": "Dobles",
+    "admin_dashboard": "Admin",
+    "reservation_successful": "¡Reservación exitosa!",
+    "reservation_deleted": "Reservación eliminada correctamente",
+    "reservation_failed": "Error al realizar la reservación",
+    "delete_failed": "Error al eliminar la reservación",
+    "view_history": "Historial",
+    "logout": "Salir",
+    "no_history": "Actualmente no hay historial"
+}

@@ -1,0 +1,125 @@
+{
+    "project": "Tennis Court Reservation System",
+    "framework": "Next.js 14.2.5 with TypeScript",
+    "features_implemented": {
+        "authentication": {
+            "description": "Users can log in, and the navigation bar is displayed if a user is logged in.",
+            "methods": [
+                "localStorage to store user session"
+            ]
+        },
+        "i18n_integration": {
+            "library": "next-i18next",
+            "status": "Integrated with client-side loading using useTranslation hook",
+            "common_issues": [
+                "React Hydration Error: Fixed by ensuring translations are loaded before rendering",
+                "getStaticProps not supported in app/ structure: Removed usage"
+            ]
+        },
+        "components": {
+            "NavBar": {
+                "description": "Fixed navigation bar displayed on all screens when logged in.",
+                "icons_used": [
+                    "react-icons/AiOutlineHome",
+                    "react-icons/AiOutlineHistory",
+                    "react-icons/AiOutlineLogout",
+                    "react-icons/FiSettings"
+                ],
+                "display_condition": "Only displayed if a user is logged in"
+            },
+            "Reserve": {
+                "description": "Court reservation component allowing users to book courts if available.",
+                "libraries_used": [
+                    "react-calendar",
+                    "react-toastify"
+                ],
+                "states": [
+                    "courts",
+                    "selectedCourt",
+                    "date",
+                    "time",
+                    "type",
+                    "reservations",
+                    "currentUser",
+                    "loaded"
+                ],
+                "main_methods": [
+                    "fetchCourts: Fetches available courts from API",
+                    "fetchReservations: Fetches existing reservations from API",
+                    "isCourtAvailable: Checks if a court is available for booking",
+                    "handleReserve: Handles reservation process",
+                    "handleDelete: Allows users to delete their own reservations"
+                ],
+                "issues_fixed": [
+                    "React Hydration Error: Ensured i18n is initialized before rendering",
+                    "Removed getStaticProps due to incompatibility with app/ structure"
+                ]
+            }
+        },
+        "styling": {
+            "framework": "Tailwind CSS",
+            "status": "Integrated and used for responsive design",
+            "issues_fixed": [
+                "Ensured Tailwind CSS is correctly loaded and applied"
+            ]
+        },
+        "configuration_files": {
+            "tailwind.config.js": {
+                "content_paths": [
+                    "./src/**/*.{js,ts,jsx,tsx}",
+                    "./pages/**/*.{js,ts,jsx,tsx}",
+                    "./components/**/*.{js,ts,jsx,tsx}"
+                ]
+            },
+            "next.config.mjs": {
+                "i18n_imported": true,
+                "type_module": true
+            },
+            "i18n.js": {
+                "description": "Handles i18next configuration for localization",
+                "used_in": [
+                    "layout.tsx",
+                    "client components"
+                ]
+            }
+        },
+        "common.json_translations": {
+            "available_languages": [
+                "es",
+                "en"
+            ],
+            "es_translations": {
+                "welcome": "Bienvenido a Reservaciones de Canchas de Tenis",
+                "register": "Registrarse",
+                "login": "Iniciar Sesión",
+                "reserve_court": "Reservar",
+                "view_reservations": "Ver Reservaciones",
+                "delete_reservation": "Eliminar Reservación",
+                "court": "Cancha",
+                "date": "Fecha",
+                "time": "Hora",
+                "type": "Tipo",
+                "single": "Individual",
+                "double": "Dobles",
+                "admin_dashboard": "Admin",
+                "reservation_successful": "¡Reservación exitosa!",
+                "reservation_deleted": "Reservación eliminada correctamente",
+                "reservation_failed": "Error al realizar la reservación",
+                "delete_failed": "Error al eliminar la reservación",
+                "view_history": "Historial",
+                "logout": "Salir",
+                "no_history": "Actualmente no hay historial"
+            }
+        }
+    },
+    "errors_encountered_and_solutions": [
+        {
+            "error": "React Hydration Error",
+            "solution": "Ensured i18n is initialized before rendering by using useEffect and a loaded state."
+        },
+        {
+            "error": "getStaticProps not supported in app/ structure",
+            "solution": "Removed getStaticProps and handled all data fetching and translation loading on the client side."
+        }
+    ]
+}
