@@ -1,37 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tennis Court Reservation System
 
-## Getting Started
+A web-based application for reserving tennis courts at a club, built using Next.js, TypeScript, and Tailwind CSS. The system supports multi-language localization and includes features such as court reservations, user authentication, and a responsive design optimized for mobile devices.
 
-First, run the development server:
+## Features
+
+- **User Authentication**: Secure login for users with session management using `localStorage`.
+- **Court Reservation**: Users can view available courts, select a date and time, and reserve a court.
+- **Admin Dashboard**: Admins can view all reservations and manage courts.
+- **Responsive Design**: Fully responsive UI designed with Tailwind CSS, optimized for mobile devices.
+- **Multi-language Support**: Localization using `next-i18next` with support for Spanish and English.
+
+## Technologies Used
+
+- **Next.js**: Framework for building React applications with server-side rendering.
+- **TypeScript**: Superset of JavaScript providing type safety.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **react-i18next**: Localization library for React applications.
+- **axios**: HTTP client for making API requests.
+- **react-toastify**: Library for providing notifications to the user.
+- **react-calendar**: Calendar component for selecting reservation dates.
+
+## Project Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/jaimeirazabal1/Tennis-Court-Reservation-System.git
+cd Tennis-Court-Reservation-System
+```
+
+### 2. Install Dependencies
+
+Make sure you have Node.js installed, then run:
+
+```bash
+npm install
+```
+
+### 3. Environment Variables
+
+Create a `.env.local` file in the root directory and add the following environment variables:
+
+```bash
+NEXT_PUBLIC_API_URL=your_api_url_here
+```
+
+Replace `your_api_url_here` with the actual URL of your backend API.
+
+### 4. Running the Development Server
+
+To start the development server, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be running on [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 5. Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To create a production build, run:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Then start the server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+- **`/src`**: Contains all the source code.
+  - **`/app`**: Contains the main application files.
+    - **`/components`**: Reusable components like `NavBar`.
+    - **`/pages`**: Contains individual pages like `Home`, `Reserve`, `Admin`.
+    - **`/styles`**: Contains global styles, including Tailwind CSS.
+  - **`/public`**: Static assets like images and icons.
+  - **`/locales`**: Contains translation files for multi-language support.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Common Commands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Tennis-Court-Reservation-System
+- **`npm run dev`**: Starts the development server.
+- **`npm run build`**: Builds the application for production.
+- **`npm start`**: Starts the production server.
+- **`npm run lint`**: Runs the linter for code quality checks.
+
+## Troubleshooting
+
+### React Hydration Error
+
+If you encounter a React Hydration Error, ensure that the translations are fully loaded before rendering components by using `useEffect` to check if `i18next` is initialized.
+
+### Tailwind CSS Not Applying Styles
+
+Make sure that `globals.css` is correctly imported in your `layout.tsx` and that the paths in `tailwind.config.js` include all relevant directories.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
